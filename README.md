@@ -1,5 +1,7 @@
 # rational-cpp
 
+[![Build](https://github.com/zfergus/rational-cpp/actions/workflows/continuous.yml/badge.svg)](https://github.com/zfergus/rational-cpp/actions/workflows/continuous.yml)
+
 C++ Wrapper of GMP's Rational Type
 
 ## Usage
