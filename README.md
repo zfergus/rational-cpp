@@ -53,6 +53,11 @@ typedef Eigen::Matrix<Rational, 3, 1, Eigen::ColMajor | Eigen::DontAlign> Vector
 typedef Eigen::Array<Rational, 3, 1, Eigen::ColMajor | Eigen::DontAlign> Array3r;
 ```
 
+## Acknowledgements
+
+This is a modified version of `rational-gmp.cpp` from [CVC3](https://cs.nyu.edu/acsys/cvc3/releases/1.5/doc/rational-gmp_8cpp-source.html) by Sergey Berezin.
+The licensed for which can be found [here](https://cs.nyu.edu/acsys/cvc3/releases/1.5/doc/LICENSE.html).
+
 ## License
 
 MIT License © 2020, Zachary Ferguson (See <a href="https://github.com/zfergus/rational-cpp/blob/main/LICENSE"><code>LICENSE</code></a> for details).
