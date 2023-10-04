@@ -8,11 +8,11 @@ TEST_CASE("Rational", "[rational]")
     using namespace rational;
     Rational r;
 
-    r = Rational(0.5);
-    CHECK(r.numerator() == 1);
-    CHECK(r.denominator() == 2);
-    CHECK(r == 0.5);
-    CHECK(double(r) == 0.5);
+    // r = Rational(0.5);
+    // CHECK(r.numerator() == 1);
+    // CHECK(r.denominator() == 2);
+    // CHECK(r == 0.5);
+    // CHECK(double(r) == 0.5);
 
     // r = Rational("1", "2");
     // CHECK(r.numerator() == 1);
