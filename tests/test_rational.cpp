@@ -14,18 +14,17 @@ TEST_CASE("Rational", "[rational]")
     // CHECK(r == 0.5);
     // CHECK(double(r) == 0.5);
 
-    // r = Rational("1", "2");
-    // CHECK(r.numerator() == 1);
-    // CHECK(r.denominator() == 2);
-    // CHECK(r == 0.5);
-    // CHECK(double(r) == 0.5);
+    r = Rational("1", "2");
+    CHECK(r.numerator() == 1);
+    CHECK(r.denominator() == 2);
+    CHECK(r == 0.5);
+    CHECK(double(r) == 0.5);
 
-    // r = Rational("1", "3");
-    // CHECK(r.numerator() == 1);
-    // CHECK(r.denominator() == 3);
-    // CHECK(r != 1.0 / 3.0);         // 1/3 is not exactly representable in
-    // binary CHECK(double(r) == 1.0 / 3.0); // match when converted to the
-    // closest double
+    r = Rational("1", "3");
+    CHECK(r.numerator() == 1);
+    CHECK(r.denominator() == 3);
+    CHECK(r != 1.0 / 3.0);         // 1/3 is not exactly representable in binary
+    CHECK(double(r) == 1.0 / 3.0); // match when converted to the closest double
 
     // r = Rational("-1670137647214829", "36893488147419103232");
     // CHECK(std::string(r) == "-1670137647214829/36893488147419103232");
