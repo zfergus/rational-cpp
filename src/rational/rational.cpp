@@ -18,7 +18,7 @@ Rational::Rational()
 
 Rational::Rational(double d)
 {
-    // assert(std::isfinite(d));
+    assert(std::isfinite(d));
     mpq_init(value);
     mpq_set_d(value, d);
     canonicalize();
@@ -26,7 +26,7 @@ Rational::Rational(double d)
 
 Rational::Rational(float d)
 {
-    // assert(std::isfinite(d));
+    assert(std::isfinite(d));
     mpq_init(value);
     double ddouble = d; // convert (float)d to double
     mpq_set_d(value, ddouble);
@@ -270,7 +270,7 @@ void Rational::Integer::print() const { mpz_out_str(NULL, 10, value); }
 
 Rational::Integer::operator long long() const
 {
-    // assert(mpz_fits_slong_p(value));
+    assert(mpz_fits_slong_p(value));
     return mpz_get_si(value);
 }
 

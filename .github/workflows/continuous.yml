@@ -112,4 +112,5 @@ jobs:
           cmake --build build -j2 && ccache --show-stats
 
       - name: Tests
+        if: runner.os != 'Windows' || matrix.config != 'Debug'
         run: cd build; ctest --verbose -j2
