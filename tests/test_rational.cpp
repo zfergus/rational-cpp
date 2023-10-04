@@ -26,12 +26,12 @@ TEST_CASE("Rational", "[rational]")
     CHECK(r != 1.0 / 3.0);         // 1/3 is not exactly representable in binary
     CHECK(double(r) == 1.0 / 3.0); // match when converted to the closest double
 
-    // r = Rational("-1670137647214829", "36893488147419103232");
-    // CHECK(std::string(r) == "-1670137647214829/36893488147419103232");
-    // CHECK(r == -1670137647214829.0 / 36893488147419103232.0);
+    r = Rational("-1670137647214829", "36893488147419103232");
+    CHECK(std::string(r) == "-1670137647214829/36893488147419103232");
+    CHECK(r == -1670137647214829.0 / 36893488147419103232.0);
 
-    // r = Rational("1", "0");
-    // CHECK(r.numerator() == 1);
-    // CHECK(r.denominator() == 0);
-    // CHECK(std::string(r) == "1/0");
+    r = Rational("1", "0");
+    CHECK(r.numerator() == 1);
+    CHECK(r.denominator() == 0);
+    CHECK(std::string(r) == "1/0");
 }
