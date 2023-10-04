@@ -7,6 +7,9 @@
 
 #include <gmp.h>
 
+#include <string>
+#include <ostream>
+
 namespace rational {
 
 /// @brief Helper class that wraps GMP's mpq_t (rational) type
