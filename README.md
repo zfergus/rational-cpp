@@ -40,7 +40,7 @@ The only dependency is [GMP](https://gmplib.org/), which must be installed at a 
 ```cpp
 #include <rational/rational.hpp>
 
-rational::Rational r = rational::Rational::from_string("1", "2");
+rational::Rational r("1", "2");
 assert(r == 0.5);
 ```
 
