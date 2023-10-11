@@ -60,4 +60,4 @@ The licensed for which can be found [here](https://cs.nyu.edu/acsys/cvc3/release
 
 ## License
 
-MIT License © 2020, Zachary Ferguson (See <a href="https://github.com/zfergus/rational-cpp/blob/main/LICENSE"><code>LICENSE</code></a> for details).
+MIT License © 2023, Zachary Ferguson (See <a href="https://github.com/zfergus/rational-cpp/blob/main/LICENSE"><code>LICENSE</code></a> for details).
