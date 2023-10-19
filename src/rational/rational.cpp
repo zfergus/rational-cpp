@@ -219,9 +219,9 @@ std::ostream& operator<<(std::ostream& os, const Rational& r)
 
 // numerator and denominator
 
-int64_t Rational::numerator() const { return Integer::from_numerator(*this); }
+long long Rational::numerator() const { return Integer::from_numerator(*this); }
 
-int64_t Rational::denominator() const
+long long Rational::denominator() const
 {
     return Integer::from_denominator(*this);
 }

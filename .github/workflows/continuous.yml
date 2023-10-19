@@ -46,21 +46,11 @@ jobs:
           brew install ccache
           echo 'CACHE_PATH=~/Library/Caches/ccache' >> "$GITHUB_ENV"
 
-      - name: Stetup Conda
-        if: runner.os == 'Windows'
-        uses: s-weigand/setup-conda@v1
-        with:
-          conda-channels: anaconda, conda-forge
-          python-version: 3.6
-
       - name: Dependencies (Windows)
         if: runner.os == 'Windows'
         run: |
           choco install ccache
           "CACHE_PATH=${env:LOCALAPPDATA}\ccache" | Out-File -FilePath $env:GITHUB_ENV -Append
-          conda install -c conda-forge mpir -y
-          "GMP_INC=C:\Miniconda\Library\include" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "GMP_LIB=C:\Miniconda\Library\lib" | Out-File -FilePath $env:GITHUB_ENV -Append
 
       # Install Ninja (only needed on Windows)
       - name: Install Ninja
