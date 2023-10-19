@@ -2,21 +2,21 @@
 if(WIN32)
   message(STATUS "Third-party: downloading gmp + mpfr")
 
-  include(CPM)
+  include(FetchContent)
 
-  CPMAddPackage(
-    NAME gmp
+  FetchContent_Declare(
+    gmp
     URL https://cgal.geometryfactory.com/CGAL/precompiled_libs/auxiliary/x64/GMP/5.0.1/gmp-all-CGAL-3.9.zip
     URL_MD5 508c1292319c832609329116a8234c9f
-    DOWNLOAD_ONLY YES
   )
+  FetchContent_MakeAvailable(gmp)
 
-  CPMAddPackage(
-    NAME mpfr
+  FetchContent_Declare(
+    mpfr
     URL https://cgal.geometryfactory.com/CGAL/precompiled_libs/auxiliary/x64/MPFR/3.0.0/mpfr-all-CGAL-3.9.zip
     URL_MD5 48840454eef0ff18730050c05028734b
-    DOWNLOAD_ONLY YES
   )
+  FetchContent_MakeAvailable(mpfr)
 
   # For CGAL
   set(ENV{GMP_DIR} "${gmp_SOURCE_DIR}")
