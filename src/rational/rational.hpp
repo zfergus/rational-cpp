@@ -55,8 +55,8 @@ public:
 
     int sign() const;
 
-    long long numerator() const;
-    long long denominator() const;
+    int64_t numerator() const;
+    int64_t denominator() const;
 
     std::string numerator_str() const;
     std::string denominator_str() const;
