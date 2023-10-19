@@ -1,27 +1,42 @@
 # Try to find the GNU Multiple Precision Arithmetic Library (GMP)
 # See http://gmplib.org/
 
+if(${CMAKE_VERSION} VERSION_LESS "3.18.0")
+    set(REQUIRED_FLAG "")
+else()
+    set(REQUIRED_FLAG REQUIRED)
+endif()
+
+# On Windows, we must use the pre-compiled versions downloaded with rational-cpp
+if(WIN32)
+    set(NO_DEFAULT_FLAG NO_DEFAULT_PATH)
+else()
+    set(NO_DEFAULT_FLAG "")
+endif()
+
 find_path(GMP_INCLUDES
     NAMES
         gmp.h
     PATHS
         ENV GMP_DIR
-        ${GMP_WINDOWS_PATH}
         ${INCLUDE_INSTALL_DIR}
     PATH_SUFFIXES
         include
+    ${REQUIRED_FLAG}
+    ${NO_DEFAULT_FLAG}
 )
 
 find_library(GMP_LIBRARIES
     NAMES
         gmp
-        libgmp
+        libgmp-10
     PATHS
         ENV GMP_DIR
-        ${GMP_WINDOWS_PATH}
         ${LIB_INSTALL_DIR}
     PATH_SUFFIXES
         lib
+    ${REQUIRED_FLAG}
+    ${NO_DEFAULT_FLAG}
 )
 
 set(GMP_EXTRA_VARS "")
@@ -33,10 +48,11 @@ if(WIN32)
             libgmp-10.dll
         PATHS
             ENV GMP_DIR
-            ${GMP_WINDOWS_PATH}
             ${LIB_INSTALL_DIR}
         PATH_SUFFIXES
             lib
+        ${REQUIRED_FLAG}
+        ${NO_DEFAULT_FLAG}
     )
     list(APPEND GMP_EXTRA_VARS GMP_RUNTIME_LIB)
 endif()

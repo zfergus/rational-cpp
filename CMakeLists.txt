@@ -13,7 +13,7 @@ if(RATIONAL_TOPLEVEL_PROJECT)
 else()
   # Don't use cmake_minimum_required here to avoid implicitly overriding parent policies
   if(${CMAKE_VERSION} VERSION_LESS ${REQUIRED_CMAKE_VERSION})
-    message(FATAL_ERROR "CMake required version to build IPC Toolkit is ${REQUIRED_CMAKE_VERSION}")
+    message(FATAL_ERROR "CMake required version to build rational-cpp is ${REQUIRED_CMAKE_VERSION}")
   endif()
 endif()
 
@@ -83,7 +83,7 @@ include(rational_use_colors)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 ################################################################################
-# IPC Toolkit Library
+# Rational Library
 ################################################################################
 
 # Add an empty library and fill in the list of sources in `src/CMakeLists.txt`.
@@ -93,7 +93,7 @@ add_library(rational::rational ALIAS rational_rational)
 # Add source and header files to rational
 add_subdirectory("${RATIONAL_SOURCE_DIR}")
 
-# Public include directory for IPC Toolkit
+# Public include directory for rational-cpp
 target_include_directories(rational_rational PUBLIC "${RATIONAL_INCLUDE_DIR}")
 
 ################################################################################
@@ -108,7 +108,7 @@ target_compile_definitions(rational_rational PUBLIC NOMINMAX)
 ################################################################################
 
 # GMP
-find_package(GMP REQUIRED)
+include(gmp)
 target_link_libraries(rational_rational PUBLIC gmp::gmp)
 
 # Warnings
