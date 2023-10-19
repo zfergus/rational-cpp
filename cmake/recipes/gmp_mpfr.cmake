@@ -12,7 +12,7 @@ if(WIN32)
   )
 
   CPMAddPackage(
-    mpfr
+    NAME mpfr
     URL https://cgal.geometryfactory.com/CGAL/precompiled_libs/auxiliary/x64/MPFR/3.0.0/mpfr-all-CGAL-3.9.zip
     URL_MD5 48840454eef0ff18730050c05028734b
     DOWNLOAD_ONLY YES
