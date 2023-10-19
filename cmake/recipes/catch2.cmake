@@ -10,7 +10,7 @@
 # governing permissions and limitations under the License.
 #
 if(TARGET Catch2::Catch2)
-    return()
+  return()
 endif()
 
 message(STATUS "Third-party: creating target 'Catch2::Catch2'")

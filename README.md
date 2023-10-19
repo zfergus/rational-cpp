@@ -33,7 +33,7 @@ where `PROJECT_NAME` is the name of your library/binary.
 
 ### Dependencies
 
-The only dependency is [GMP](https://gmplib.org/), which must be installed at a system level.
+The only dependency is [GMP](https://gmplib.org/), which is downloaded and built through CMake.
 
 ### Example: Reading Rational Numbers from Strings
 

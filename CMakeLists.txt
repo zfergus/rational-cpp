@@ -108,7 +108,7 @@ target_compile_definitions(rational_rational PUBLIC NOMINMAX)
 ################################################################################
 
 # GMP
-find_package(GMP REQUIRED)
+include(gmp)
 target_link_libraries(rational_rational PUBLIC gmp::gmp)
 
 # Warnings
