@@ -19,7 +19,6 @@ if(WIN32)
   )
 
   # For CGAL
-  message(STATUS "Third-party: gmp + mpfr will be used from ${gmp_SOURCE_DIR} and ${mpfr_SOURCE_DIR}")
   set(ENV{GMP_DIR} "${gmp_SOURCE_DIR}")
   set(ENV{MPFR_DIR} "${mpfr_SOURCE_DIR}")
 else()
