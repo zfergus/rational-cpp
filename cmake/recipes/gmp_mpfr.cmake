@@ -17,6 +17,11 @@ if(WIN32)
     URL_MD5 48840454eef0ff18730050c05028734b
     DOWNLOAD_ONLY YES
   )
+
+  # For CGAL
+  message(STATUS "Third-party: gmp + mpfr will be used from ${gmp_SOURCE_DIR} and ${mpfr_SOURCE_DIR}")
+  set(ENV{GMP_DIR} "${gmp_SOURCE_DIR}")
+  set(ENV{MPFR_DIR} "${mpfr_SOURCE_DIR}")
 else()
   # On Linux/macOS, gmp+mpfr will be fetched and compiled
 endif()
