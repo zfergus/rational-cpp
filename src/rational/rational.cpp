@@ -219,9 +219,9 @@ std::ostream& operator<<(std::ostream& os, const Rational& r)
 
 // numerator and denominator
 
-long long Rational::numerator() const { return Integer::from_numerator(*this); }
+uint64_t Rational::numerator() const { return Integer::from_numerator(*this); }
 
-long long Rational::denominator() const
+uint64_t Rational::denominator() const
 {
     return Integer::from_denominator(*this);
 }
@@ -292,40 +292,40 @@ template bool Rational::operator><double>(double r1);
 template bool Rational::operator><float>(float r1);
 template bool Rational::operator><int>(int r1);
 template bool Rational::operator><long>(long r1);
-template bool Rational::operator><const mpq_t&>(const mpq_t& r1);
-template bool Rational::operator><const std::string&>(const std::string& r1);
-template bool Rational::operator><const Rational&>(const Rational& r1);
+template bool Rational::operator><const mpq_t&>(const mpq_t & r1);
+template bool Rational::operator><const std::string&>(const std::string & r1);
+template bool Rational::operator><const Rational&>(const Rational & r1);
 
-template bool Rational::operator<=<double>(double r1);
-template bool Rational::operator<=<float>(float r1);
-template bool Rational::operator<=<int>(int r1);
-template bool Rational::operator<=<long>(long r1);
-template bool Rational::operator<=<const mpq_t&>(const mpq_t& r1);
-template bool Rational::operator<=<const std::string&>(const std::string& r1);
-template bool Rational::operator<=<const Rational&>(const Rational& r1);
+template bool Rational::operator<= <double>(double r1);
+template bool Rational::operator<= <float>(float r1);
+template bool Rational::operator<= <int>(int r1);
+template bool Rational::operator<= <long>(long r1);
+template bool Rational::operator<= <const mpq_t&>(const mpq_t& r1);
+template bool Rational::operator<= <const std::string&>(const std::string& r1);
+template bool Rational::operator<= <const Rational&>(const Rational& r1);
 
-template bool Rational::operator>=<double>(double r1);
-template bool Rational::operator>=<float>(float r1);
-template bool Rational::operator>=<int>(int r1);
-template bool Rational::operator>=<long>(long r1);
-template bool Rational::operator>=<const mpq_t&>(const mpq_t& r1);
-template bool Rational::operator>=<const std::string&>(const std::string& r1);
-template bool Rational::operator>=<const Rational&>(const Rational& r1);
+template bool Rational::operator>= <double>(double r1);
+template bool Rational::operator>= <float>(float r1);
+template bool Rational::operator>= <int>(int r1);
+template bool Rational::operator>= <long>(long r1);
+template bool Rational::operator>= <const mpq_t&>(const mpq_t& r1);
+template bool Rational::operator>= <const std::string&>(const std::string& r1);
+template bool Rational::operator>= <const Rational&>(const Rational& r1);
 
-template bool Rational::operator==<double>(double r1);
-template bool Rational::operator==<float>(float r1);
-template bool Rational::operator==<int>(int r1);
-template bool Rational::operator==<long>(long r1);
-template bool Rational::operator==<const mpq_t&>(const mpq_t& r1);
-template bool Rational::operator==<const std::string&>(const std::string& r1);
-template bool Rational::operator==<const Rational&>(const Rational& r1);
+template bool Rational::operator== <double>(double r1);
+template bool Rational::operator== <float>(float r1);
+template bool Rational::operator== <int>(int r1);
+template bool Rational::operator== <long>(long r1);
+template bool Rational::operator== <const mpq_t&>(const mpq_t& r1);
+template bool Rational::operator== <const std::string&>(const std::string& r1);
+template bool Rational::operator== <const Rational&>(const Rational& r1);
 
-template bool Rational::operator!=<double>(double r1);
-template bool Rational::operator!=<float>(float r1);
-template bool Rational::operator!=<int>(int r1);
-template bool Rational::operator!=<long>(long r1);
-template bool Rational::operator!=<const mpq_t&>(const mpq_t& r1);
-template bool Rational::operator!=<const std::string&>(const std::string& r1);
-template bool Rational::operator!=<const Rational&>(const Rational& r1);
+template bool Rational::operator!= <double>(double r1);
+template bool Rational::operator!= <float>(float r1);
+template bool Rational::operator!= <int>(int r1);
+template bool Rational::operator!= <long>(long r1);
+template bool Rational::operator!= <const mpq_t&>(const mpq_t& r1);
+template bool Rational::operator!= <const std::string&>(const std::string& r1);
+template bool Rational::operator!= <const Rational&>(const Rational& r1);
 
 } // namespace rational
